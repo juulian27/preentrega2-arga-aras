@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* estilos del div contenedor */
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+ /* estilos del header */
+
+header .titulo1{
+    border-top: 0.5rem solid black;
+    color: white;
+    padding: 0.4rem;
+    background-color: #EC1C24;
+    margin-bottom: 1.5rem;
+}
+
+header h1{
+    text-align: center;
+
+}
+
+/* estilos de section */
+
+section div{
+    background-color:rgb(199, 196, 196) ;
+    border: 3px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-weight: bolder;
+}
+
+section div h2{
+    text-align: center;
+    margin: 0.5rem;
+}
+
+/* estilos de section-dos */
+
+.section-dos{
+    display: none;
+}
+
+
+/* estilos de footer */
+
+footer h6{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    background-color: black;
+    color: white;
+}
+
+
+/* media query */
+
+@media screen and (min-width:600px){
+    .contenedor{
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "main section-uno"
+        "main section-dos"
+        "footer footer";
+    }
+
+    header{
+        grid-area: header;
+    }
+
+    main{
+        grid-area: main;
+    }
+
+    .section-uno{
+        grid-area: section-uno;
+        font-size: 1.3rem;
+    }
+
+    .section-dos{
+        grid-area: section-dos;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+
+  .section-dos{
+    display: block;
+  }
+}
+
+/* estilos de tienda online */
+
+/* estilos de header */
+
+.titulo2{
+    border-top: 0.5rem solid black;
+    color: white;
+    padding: 0.4rem;
+    background-color: #EC1C24;
+    margin-bottom: 0.5rem;
+}
+
+/* estilos de section */ 
+
+.section-tienda-uno{
+    display: none;
+}
+
+/* estilos de main */
+
+.main-tienda{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-tienda h2{
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bolder;
+}
+
+.main-tienda div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   align-items: center;
+}
+
+.main-tienda div div img{
+    width: 18rem;
+    height: 18rem;
+}
+
+.card{
+    background-color: rgb(94, 93, 93);
+    color: white;
+    border: 2px solid black;
+    width: 20rem;
+    margin-bottom: 2.5rem;
+}
+
+.card-text{
+    width: 15rem;
+}
+
+.card-body{
+    width: 25rem;
+    height: 20rem;
+    text-align: center;
+}
+
+/* estilos de section dos */
+
+.section-tienda-dos{
+    padding: 2rem;
+}
+
+.section-tienda-dos h6{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 2rem;
+}
+
+.section-tienda-dos p{
+    padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+/* media query tienda online */
+
+@media screen and (min-width:600px){
+
+  .section-tienda-uno{
+    display: block;
+    margin-top: 1rem;
+  }
+   /* grid template areas */
+
+  .contenedor-dos{
+    height: 100vh;
+    display: grid;
+    grid-template-columns:2fr 0.5fr ;
+    grid-template-rows: 1fr 1fr 3fr 0.5fr;
+    grid-template-areas: 
+    "header header"
+    "section-tienda-uno section-tienda-dos"
+    "main section-tienda-dos"
+    "footer footer"
+    ;
+  }
+
+  .header-tienda{
+    grid-area: header;
+  }
+
+  .section-tienda-uno{
+    grid-area: section-tienda-uno;
+  }
+
+  .section-tienda-dos{
+    line-height: 2rem;
+    font-size: 1rem;
+    padding: 1rem;
+    grid-area: section-tienda-dos;
+  }
+
+  .main-tienda{
+    grid-area: main;
+  }
+
+  .footer-tienda{
+    grid-area: footer;
+  }
+
+  /* nuevos estilos de main */
+
+    .main-tienda .contenedor-img{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+  }
+}
